@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UserProfile</title>
+  <link rel="stylesheet" href="global.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f8ff;
+      color: #003d4d;
+      padding-top: 100px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .sidebar {
+      flex: 1;
+      min-width: 250px;
+      background-color: #007399;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .sidebar img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: auto;
+      display: block;
+    }
+
+    .sidebar h2,
+    .sidebar p {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .skill-bar {
+      background-color: #3399cc;
+      height: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .skill-bar div {
+      height: 100%;
+      background-color: #66d9ff;
+    }
+
+    .main {
+      flex: 3;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #004d66;
+    }
+
+    .card ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .calendar table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .calendar th,
+    .calendar td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #999;
+      border-radius: 4px;
+    }
+
+    .form-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .form-buttons button {
+      padding: 8px 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .form-buttons button[type="submit"] {
+      background-color: #004d66;
+      color: white;
+    }
+
+    .form-buttons button[type="reset"] {
+      background-color: #ccc;
+    }
+	
+	.interests ul {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		justify-content: center;
+	}
+
+	.interests li {
+		margin-bottom: 10px;
+	}
+
+	.interests img {
+		border-radius: 10px;
+		border: 2px solid #004d66;
+		transition: transform 0.3s ease;
+	}
+
+	 .interests img:hover {
+		transform: scale(1.1);
+	  }
+
+  </style>
+</head>
+<body>
+   <nav>
+    <img src="images/logo.jpg" alt="Logo">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="volunteer.html" >Volunteer</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="sitemap.html" >Site Map</a></li>
+      <li><a href="Team.html">Team</a></li>
+      <li><a href="Profile.html" class="active">User Profile</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="container">
+    <div class="sidebar">
+      <img src="./images/Userprofile.jpg" alt="User Avatar">
+      <h2 style="font-size : 16px;">Chanugi Weerakoon</h2>
+      <p>"We are the generation that must restore the blue planet."</p>
+      <p>Age - 20<br>Work - Computer Science Student<br>Family - Single<br>Location - Sri Lanka</p> 
+
+      <div class="skills">
+        <p>Communication</p>
+        <div class="skill-bar"><div style="width: 85%;"></div></div>
+        <p>Team Working</p>
+        <div class="skill-bar"><div style="width: 90%;"></div></div>
+        <p>Event Organising</p>
+        <div class="skill-bar"><div style="width: 60%;"></div></div>
+        <p>Public Speaking</p>
+        <div class="skill-bar"><div style="width: 80%;"></div></div>
+        <p>First Aid Certified</p>
+        <div class="skill-bar"><div style="width: 50%;"></div></div>
+        <p>Marine Conservation Knowledge</p>
+        <div class="skill-bar"><div style="width: 70%;"></div></div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="card bio">
+        <h3>Short Bio</h3>
+        <p>I am a first-year Computer Science student at IIT (University of Westminster). I studied at Sujatha Vidyalaya, Matara. I'm passionate about tech and marine conservation, and I hope to use my skills to protect ocean life and support sustainable development.</p>
+      </div>
+
+      <div class="card goals">
+        <h3>Goals</h3>
+        <ul>
+          <li>Raise awareness about marine pollution and its harmful effects.</li>
+          <li>Support sustainable fishing practices to conserve marine life.</li>
+          <li>Actively participate in coastal and ocean cleanup projects.</li>
+          <li>Develop technological skills to aid environmental protection.</li>
+          <li>Promote and advocate for SDG Goal 14: Life Below Water.</li>
+        </ul>
+      </div>
+
+      <div class="card frustrations">
+        <h3>Frustrations</h3>
+        <ul>
+          <li>Lack of marine conservation funding.</li>
+          <li>Plastic overuse in urban areas.</li>
+          <li>Limited government support for environmental initiatives.</li>
+          <li>Challenges in enforcing fishing regulations.</li>
+        </ul>
+      </div>
+
+      <div class="card experience">
+        <h3>Experience</h3>
+        <ul>
+          <li>Volunteer at OceanGuard NGO.</li>
+          <li>Research Intern - CoralWatch.</li>
+          <li>Organizer - Coastal Cleanup Campaign.</li>
+        </ul>
+      </div>
+
+      <div class="card calendar">
+        <h3>Volunteering Availability</h3>
+        <table>
+          <tr><th>Day</th><th>Time</th></tr>
+          <tr><td>Monday</td><td>2pm - 4pm</td></tr>
+          <tr><td>Tuesday</td><td>10am - 12pm</td></tr>
+          <tr><td>Wednesday</td><td>8am - 10am</td></tr>
+          <tr><td>Thursday</td><td>8am - 10am</td></tr>
+          <tr><td>Friday</td><td>10am - 12pm</td></tr>
+          <tr><td>Saturday</td><td>2pm - 4pm</td></tr>
+          <tr><td>Sunday</td><td>8am - 10am</td></tr>
+        </table>
+      </div>
+	  
+	  <div class="card interests">
+		  <h3>UN Goals I Support</h3>
+		  <ul>
+			<li>
+			  <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-14.jpg" alt="SDG Goal 14" width="80">
+			</li>
+			<li>
+			  <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-13.jpg" alt="SDG Goal 13" width="80">
+			</li>
+			<li>
+			  <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-15.jpg" alt="SDG Goal 15" width="80">
+			</li>
+			<li>
+			  <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-12.jpg" alt="SDG Goal 12" width="80">
+			</li>
+			<li>
+			  <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-07.jpg
+" width="80">
+			</li>
+		  </ul>
+	  </div>
+	  
+
+      <div class="card contact-form">
+        <h3>📧 Contact Me</h3>
+        <form action="#success" method="get">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Telephone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="message">Message or Inquiry</label>
+            <textarea id="message" name="message" placeholder="Tell me about your interest in marine conservation..."></textarea>
+          </div>
+          <div class="form-buttons">
+            <button type="submit">Send</button>
+            <button type="reset">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+   <footer>
+
+<div class="email-subscribe">
+  <form action="mailto:thesilentsea@gmail.com" method="POST" enctype="text/plain">
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</div>
+
+
+
+
+    <h2>FOLLOW US ON</h2>
+    <a href="https://www.un.org/en/"><img src="./images/united-nations.jpg" width="100" height="80" alt="United Nations"></a>
+    <a href="https://www.facebook.com/"><img src="./images/facebook-new-(1).png" width="60" height="60" alt="Facebook" ></a>
+    <a href="https://www.instagram.com/"><img src="./images/instagram-new-(1).png"  width="60" height="60" alt="Instagram" ></a>
+    <a href="https://www.youtube.com/"><img src="./images/youtube.png" width="60" height="60" alt="Youtube" ></a>
+   
+   <ul class="footer-nav">
+
+    <li><a href="home.html">Home</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="volunteer.html" >Volunteer</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="sitemap.html">Site Map</a></li>
+      <li><a href="Team.html">Team</a></li>
+      <li><a href="Profile.html" class="active">User Profile</a></li>
+       </ul>
+
+
+  
+   <ul class="footer-nav">
+   
+    <li><a href="content_ST1.html" target="_blank">Content Page ST1</a></li>
+    <li><a href="Content_ST2.html" target="_blank">Content Page ST2</a></li>
+    <li><a href="Content_ST3.html" target="_blank">Content Page ST3</a></li>
+    <li><a href="content_ST4.html" target="_blank">Content Page ST4</a></li>
+  </ul>
+
+  <ul class="footer-nav">
+   
+    <li><a href="pageEditor_ST1.html.html" target="_blank">Page Editor ST1</a></li>
+    <li><a href="PageEditor_ST2.html" target="_blank">Page Editor ST2</a></li>
+    <li><a href="page_editor_student2.html" target="_blank">Page Editor ST3</a></li>
+    <li><a href="pageEditor_ST4.html" target="_blank">Page Editor ST4</a></li>
+  </ul>
+   
+    <p>&copy; 2025 The Silent Sea | Inspired by UN SDG 14: Life Below Water</p>
+  </footer>
+</body>
+</html>

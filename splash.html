@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="4;url=home.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Silent Sea</title>
+  <link rel="stylesheet" href="global.css">
+  <style>
+    
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      background: url('images/ocean1.jpg') no-repeat center center fixed;
+
+      background-size: cover;
+      overflow: hidden;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 51, 0.6); /* dark ocean overlay */
+      
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #00ccff;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 1rem;
+      animation: rotate 3s linear infinite;
+    }
+
+    p.mission {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin-bottom: 2rem;
+    }
+
+    .group {
+      margin-top: 1rem;
+    }
+
+    .group strong {
+      font-size: 1.2rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .group ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .group li {
+      margin: 0.2rem 0;
+    }
+
+    .loader {
+      margin-top: 2rem;
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #00ccff;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1.5s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  
+  </style>
+
+</head>
+<body>
+  <div class="overlay">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616490.png" alt="Sea Icon" class="logo" />
+    <h1>The Silent Sea</h1>
+    <p class="mission">
+      Giving a voice to the silent world under the sea.
+    </p>
+
+    <div class="group">
+      <strong>Group Members:</strong>
+      <ul>
+        <li>M.D.S.Senevirathne</li>
+        <li>Chanugi Weerakoon</li>
+        <li>W.H.A.Hansika</li>
+        <li>M.D.Wanniarachchi</li>
+      </ul>
+    </div>
+
+    <div class="loader"></div>
+  </div>
+</body>
+</html>
+

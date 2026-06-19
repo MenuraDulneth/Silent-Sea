@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>Volunteer | Life Below Water</title>
+  <link rel="stylesheet" href="global.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #e0f7fa, #bbc6f4);
+      color: #071739;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: linear-gradient(to right, #f5f5f6, #bbc6f4);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      box-shadow: 0 4px 8px rgba(240, 240, 242, 0.3);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      font-size: 3rem;
+    }
+
+    nav img {
+      border-radius: 50%;
+      border: 3px solid white;
+      padding: 5px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      height: 80px;
+      margin-right: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin-left: auto;
+    }
+
+    nav li a {
+      color: rgb(15, 14, 14);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.3rem 1rem;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+      font-size: 1.2rem;
+    }
+
+    nav li a:hover {
+      background: #b2ebf2;
+      color: #050707;
+    }
+
+    .container {
+      padding: 140px 2rem 2rem;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: #071739;
+      margin-bottom: 2rem;
+    }
+
+    .filter {
+      text-align: right;
+      margin-bottom: 1rem;
+    }
+
+    .cards {
+      display: grid;
+      overflow-x: auto;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem 0;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      color: #000000;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      color: #040606;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #131212;
+      margin-bottom: 1rem;
+    }
+
+    .card ul {
+      text-align: left;
+      padding-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .card button {
+      background-color: #0077b6;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background-color: #005f8d;
+    }
+
+    .reviews {
+      margin-top: 3rem;
+    }
+
+    .reviews h2 {
+      font-size: 2rem;
+      color: #071739;
+      margin-bottom: 1rem;
+    }
+
+    .review-card {
+      background-color: #f0f9ff;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-left: 4px solid #0077b6;
+      border-radius: 5px;
+    }
+
+    .form {
+      margin-top: 3rem;
+    }
+
+    .form textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .emoji-rating span {
+      font-size: 24px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .submit-btn,
+    .cancel-btn {
+      padding: 10px 15px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .submit-btn {
+      background-color: #028090;
+      color: white;
+    }
+
+    .cancel-btn {
+      background-color: #e0e0e0;
+      color: #333;
+    }
+
+    footer {
+      background: linear-gradient(to right, #f5f5f6, #bbc6f4);
+      color: rgb(16, 15, 15);
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+
+    footer h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    footer a img {
+      margin: 0 15px;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    footer a img:hover {
+      transform: scale(1.2);
+    }
+
+    footer p {
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #030303;
+    }
+
+    .footer-nav {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1rem 0;
+      gap: 20px;
+      margin-top: 1rem;
+    }
+
+    .footer-nav li a {
+      color: #080808;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .footer-nav li a:hover {
+      color: #101011;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 1rem;
+      }
+
+      .container {
+        padding: 160px 1rem 2rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <img src="images/logo.JPG" alt="Logo" />
+    <ul>
+      <li><a href="home.html" >Home</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="volunteer.html" class="active">Volunteer</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="sitemap.html">Site Map</a></li>
+      <li><a href="Team.html">Team</a></li>
+      <li><a href="Profile.html">User Profile</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Volunteer for Life Below Water 🌊</h1>
+
+    <div class="filter">
+      <label for="sort">Sort by:</label>
+      <select id="sort">
+        <option>Most Popular</option>
+        <option>New</option>
+        <option>Nearby</option>
+      </select>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <img src="images/coral.jpg" alt="Coral Project" />
+        <h3>Coral Reef Planting</h3>
+        <p>Help replant coral to restore underwater habitats.</p>
+        <ul>
+          <li>Date: 21st of August</li>
+          <li>Duration: 1 Day</li>
+          <li>Location: Hikkaduwa</li>
+        </ul>
+        <button>Apply</button>
+      </div>
+
+      <div class="card">
+        <img src="images/beachcleanup.jpg" alt="Beach Clean" />
+        <h3>Beach Cleanup</h3>
+        <p>Keep the oceans safe by removing shoreline waste.</p>
+        <ul>
+          <li>Date: 10th of September</li>
+          <li>Duration: 4 Hours</li>
+          <li>Location: Unawatuna beach</li>
+        </ul>
+        <button>Apply</button>
+      </div>
+
+      <div class="card">
+        <img src="images/plastic.jpg" alt="Plastic Survey" />
+        <h3>Plastic Survey</h3>
+        <p>Help us track ocean plastic waste sources.</p>
+        <ul>
+          <li>Date: 15th of September</li>
+          <li>Duration: 2 Days</li>
+          <li>Location: Hikkaduwa Coastal Areas</li>
+        </ul>
+        <button>Apply</button>
+      </div>
+
+      <div class="card">
+        <img src="images/workshop.jpg" alt="Education" />
+        <h3>Awareness Workshops</h3>
+        <p>Educate others on protecting marine biodiversity.</p>
+        <ul>
+          <li>Date: 29th of July</li>
+          <li>Duration: 3 Hours</li>
+          <li>Location: Online/Community Centers</li>
+        </ul>
+        <button>Apply</button>
+      </div>
+    </div>
+
+    <div class="reviews">
+      <h2>🌟 Ratings & Reviews</h2>
+      <p><strong>9.5/10 – Excellent (based on 102 reviews)</strong></p>
+
+      <div class="review-card">
+        <h4>“Amazing impact!” – ★★★★★</h4>
+        <p>Being part of the reef project made me appreciate marine life more. <a href="#">See more</a></p>
+        <small>By John Doe – June 2025</small>
+      </div>
+
+      <div class="review-card">
+        <h4>“Loved the team” – ★★★★☆</h4>
+        <p>Cleaning the beach was both fun and meaningful. <a href="#">See more</a></p>
+        <small>By Jane Smith – May 2025</small>
+      </div>
+    </div>
+
+    <div class="form">
+      <h2>Leave a Review</h2>
+      <textarea placeholder="Write your review here..."></textarea>
+      <div class="emoji-rating">
+        <label>Rate us:</label><br>
+        <span>😡</span><span>😕</span><span>😐</span><span>😊</span><span>😍</span>
+      </div>
+      <div style="margin-top: 1rem;">
+        <button class="submit-btn">Submit</button>
+        <button class="cancel-btn" type="reset">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+
+<div class="email-subscribe">
+  <form action="mailto:thesilentsea@gmail.com" method="POST" enctype="text/plain">
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</div>
+
+
+
+
+    <h2>FOLLOW US ON</h2>
+    <a href="https://www.un.org/en/"><img src="images/unitednations.jpg" width="100" height="80" alt="United Nations"></a>
+    <a href="https://www.facebook.com/"><img src="images/facebook.png" width="60" height="60" alt="Facebook" ></a>
+    <a href="https://www.instagram.com/"><img src="images/instagram.png"  width="60" height="60" alt="Instagram" ></a>
+    <a href="https://www.youtube.com/"><img src="images/youtube.png" width="60" height="60" alt="Youtube" ></a>
+   
+   <ul class="footer-nav">
+
+    <li><a href="home.html">Home</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="volunteer.html" class="active">Volunteer</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="sitemap.html">Site Map</a></li>
+      <li><a href="Team.html">Team</a></li>
+      <li><a href="Profile.html">User Profile</a></li>
+       </ul>
+
+
+  
+   <ul class="footer-nav">
+   
+    <li><a href="content_ST1.html" target="_blank">Content Page ST1</a></li>
+    <li><a href="Content_ST2.html" target="_blank">Content Page ST2</a></li>
+    <li><a href="Content_ST3.html" target="_blank">Content Page ST3</a></li>
+    <li><a href="content_ST4.html" target="_blank">Content Page ST4</a></li>
+  </ul>
+
+  <ul class="footer-nav">
+   
+    <li><a href="pageEditor_ST1.html" target="_blank">Page Editor ST1</a></li>
+    <li><a href="PageEditor_ST2.html" target="_blank">Page Editor ST2</a></li>
+    <li><a href="PageEditor_ST3.html" target="_blank">Page Editor ST3</a></li>
+    <li><a href="pageEditor_ST4.html" target="_blank">Page Editor ST4</a></li>
+  </ul>
+   
+    <p>&copy; 2025 The Silent Sea | Inspired by UN SDG 14: Life Below Water</p>
+  </footer>
+</body>
+</html>

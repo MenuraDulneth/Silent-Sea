@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Silent Sea - Marine Biodiversity</title>
+  
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="home.css">
+  <style>
+    /* Internal Navigation */
+    .internal-nav {
+      top: 150px;
+      background: #e0f7fa;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      width: 190px;
+      margin: 1rem auto;
+      max-width: 1000px;
+      text-align: center;
+    }
+    .internal-nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    .internal-nav a {
+      text-decoration: none;
+      color: #004d40;
+      font-weight: bold;
+    }
+    .internal-nav a:hover {
+      color: #0077cc;
+    }
+    h1 {
+      font-size: 4rem;
+      color: #004d40;
+      text-align: center;
+      margin-top: 5rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+      color: #00695c;
+      margin-top: 1.5rem;
+    }
+    /*go top and back button*/
+    .go-top,
+    .go-back {
+      position: fixed;
+      bottom: 20px;
+      background: #0077cc;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+    .go-top { right: 20px; }
+    .go-back { left: 20px; }
+    .go-top:hover,
+    .go-back:hover {
+      background: #005fa3;
+    }
+    /*card section*/
+    .section-content {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+      
+    }
+    .card {
+  background: white;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;  
+  height: auto;
+}
+
+    .section-content img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      margin: 1rem auto;
+      display: block;
+    }
+  </style>
+</head>
+<body id="top">
+  <!-- Navigation Bar -->
+  <nav>
+    <img src="images/logo.jpg" alt="The Silent Sea Logo">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="sitemap.html">Site Map</a></li>
+      <li><a href="Team.html">Team</a></li>
+      <li><a href="Profile.html">User Profile</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <a href="#top" class="go-top">⬆ Go to Top</a>
+    <a href="home.html" class="go-back">⬅ Go Back</a>
+
+    <!-- Internal Navigation -->
+    <nav class="internal-nav">
+      <ul>
+        <li><a href="#importance">Importance</a></li>
+        <li><a href="#threats">Threats</a></li>
+        <li><a href="#actions">Actions</a></li>
+        <li><a href="#stories">Success Stories</a></li>
+      </ul>
+    </nav>
+
+    <!-- Section  -->
+    <section id="importance" class="section-content card">
+      
+      <h2>Importance of Marine Biodiversity</h2>
+      
+      <p><i><strong>Oceans face many threats. These include plastic pollution, overfishing, habitat destruction, and climate change. Coral bleaching events and declining fish populations serve as clear reminders of these impacts.</strong></i></p>
+      <img src="images/biodiversity.jpg" alt="Marine biodiversity with colorful coral and fish">
+      <p><i><strong>Among the biggest threats is the buildup of plastic debris, which traps wildlife and releases toxins. Climate change causes ocean acidification and warming, resulting in widespread coral bleaching and changes in species distribution. Overfishing has brought many fish populations close to collapse, upsetting food webs and local economies. Harmful fishing methods and coastal development also damage delicate habitats like mangroves and seagrass meadows.</strong></i></p>
+    </section>
+
+    
+    <section id="threats" class="section-content card">
+      <h2>Threats to Marine Life</h2>
+      <p><i><strong>Oceans face many threats, such as plastic pollution, overfishing, habitat destruction, and climate change. Coral bleaching events and falling fish populations are clear reminders of these issues.</strong></i></p>
+      <img src="images/threatesocean.jpg" alt="Plastic debris harming marine life">
+      <ul>
+        <li><i><strong>Over 8 million tons of plastic enter the ocean each year.</strong></i></li>
+        <li><i><strong>90% of big fish populations have been depleted.</strong></i></li>
+        <li><i><strong>Coral reefs could disappear by 2050 without action.</strong></i></li>
+      </ul>
+    </section>
+
+    
+    <section id="actions" class="section-content card">
+      <h2>Actions to Protect Oceans</h2>
+      <p><i><strong>Protecting marine biodiversity needs teamwork. This includes creating marine protected areas, cutting down on pollution, and encouraging sustainable fishing practices.</strong></i></p>
+      <img src="images/actiontoprotct.jpg" alt="Volunteers cleaning a beach">
+      <ul>
+        <li><i><strong>Participate in coastal cleanups.</strong></i></li>
+        <li><i><strong>Support policies that protect marine habitats.</strong></i></li>
+        <li><i><strong>Choose sustainable seafood options.</strong></i></li>
+      </ul>
+      <p><i><strong>Individual and collective action can make a real difference. Governments can designate marine protected areas and enforce regulations to limit overfishing and habitat destruction. Organizations can promote innovative solutions such as biodegradable materials and clean-up technologies. As individuals, we can reduce our plastic consumption, support businesses committed to sustainability, and advocate for stronger policies to safeguard ocean health.</strong></i></p>
+    </section>
+
+    
+    <section id="stories" class="section-content card">
+      <h2>Success Stories</h2>
+      <p><i><strong>Community-led conservation has restored coral reefs and revived endangered species. These success stories inspire further action to safeguard our oceans.</strong></i></p>
+      <img src="images/successstoriesocean.png" alt="Restored coral reef thriving underwater">
+      <p><i><strong>For example, in the Philippines, community marine reserves have increased fish populations and improved livelihoods. In Australia, the Great Barrier Reef Marine Park Authority has pioneered reef restoration projects that transplant heat-resistant corals. International collaborations such as the Global Ghost Gear Initiative have removed thousands of tons of abandoned fishing nets, protecting countless marine animals. These examples show that when people come together, recovery is possible.</strong></i></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="email-subscribe">
+      <form action="mailto:thesilentsea@gmail.com" method="POST" enctype="text/plain">
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <h2>FOLLOW US ON</h2>
+    <a href="https://www.un.org/en/"><img src="images/unitednations.jpg" width="100" height="80" alt="United Nations"></a>
+    <a href="https://www.facebook.com/"><img src="images/facebook.png" width="60" height="60" alt="Facebook"></a>
+    <a href="https://www.instagram.com/"><img src="images/instagram.png" width="60" height="60" alt="Instagram"></a>
+    <a href="https://www.youtube.com/"><img src="images/youtube.png" width="60" height="60" alt="YouTube"></a>
+
+    <ul class="footer-nav">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="table.html">Table</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="sitemap.html">Site Map</a></li>
+      <li><a href="Team.html">Team</a></li>
+      <li><a href="Profile.html">User Profile</a></li>
+    </ul>
+
+    <ul class="footer-nav">
+      <li><a href="content_ST1.html" target="_blank">Content Page ST1</a></li>
+      <li><a href="Content_ST2.html" target="_blank" class="active">Content Page ST2</a></li>
+      <li><a href="Content_ST2.html" target="_blank">Content Page ST3</a></li>
+      <li><a href="content_ST4.html" target="_blank">Content Page ST4</a></li>
+    </ul>
+
+    <ul class="footer-nav">
+      <li><a href="pageEditor_ST1.html" target="_blank">Page Editor ST1</a></li>
+      <li><a href="PageEditor_ST2.html" target="_blank">Page Editor ST2</a></li>
+      <li><a href="PageEditor_ST3.html" target="_blank">Page Editor ST3</a></li>
+      <li><a href="pageEditor_ST4.html" target="_blank">Page Editor ST4</a></li>
+    </ul>
+
+    <p>&copy; 2025 The Silent Sea | Inspired by UN SDG 14: Life Below Water</p>
+  </footer>
+</body>
+</html>
